@@ -1,180 +1,140 @@
-function hello(){
-    console.log("parth")
+function hello() {
+  console.log("parth lashkari");
 }
 
-function getExternalJSPaths(){
-    // path to load multiple files are to given here comma seperated
-    const filePaths=[];
-    return filePaths;
+function getExternalJSPaths() {
+  // path to load multiple files are to given here comma seperated
+  const filePaths = [];
+  return filePaths;
 }
 
-function onRowClick(listviewId,rowIndex){
-    return true
+function onRowClick(listviewId, rowIndex) {
+  return true;
 }
 
-function clickLabelLink(labelid)
-{
-    //console.log("labelid",labelid);
+function clickLabelLink(labelid) {
+  //console.log("labelid",labelid);
 }
 
-function onChangeSectionState(frameId, state)
-{
-    //console.log(frameId,state);
+function onChangeSectionState(frameId, state) {
+  //console.log(frameId,state);
 }
 
-function postHookPickListOk(columns,controlId){
-   // console.log(columns, controlId);
+function postHookPickListOk(columns, controlId) {
+  // console.log(columns, controlId);
 }
 
 function postHookDBLink() {
-    //will call after dblinking
+  //will call after dblinking
 }
 
-function tableOperation(tableId, operationType){
-    if(operationType === "AddRow"){
-        return true
-    } else if(operationType === "DeleteRow"){
-        return true
-    } else if(operationType === "CopyRow"){
-        return true
-    }
+function tableOperation(tableId, operationType) {
+  if (operationType === "AddRow") {
+    return true;
+  } else if (operationType === "DeleteRow") {
+    return true;
+  } else if (operationType === "CopyRow") {
+    return true;
+  }
 }
 
-
-function subFormLoad(buttonId){
-    //console.log(buttonId);
+function subFormLoad(buttonId) {
+  //console.log(buttonId);
 }
 
 function customValidation(type) {
-    if(type === "D") {
-        //operation that need to perform on Done button
-    }
-    else if(type === "S") {
-        //operation that need to perform on Save button
-    }
-    else if(type === "I") {
-        //operation that need to perform on Introduce button
-    }
-    return true;
+  if (type === "D") {
+    //operation that need to perform on Done button
+  } else if (type === "S") {
+    //operation that need to perform on Save button
+  } else if (type === "I") {
+    //operation that need to perform on Introduce button
+  }
+  return true;
 }
 
-function formLoad(){
-    //console.log("formLoad hook..");
+function formLoad() {
+  //console.log("formLoad hook..");
 }
 
-function handleCustomKeyEvent(ev){
-    //console.log("handleCustomKeyEvent",ev);
+function handleCustomKeyEvent(ev) {
+  //console.log("handleCustomKeyEvent",ev);
 }
 
-function subformDoneClick(buttonId){ 
-    //Custom Code // Doubt
-    //console.log(buttonId);
+function subformDoneClick(buttonId) {
+  //Custom Code // Doubt
+  //console.log(buttonId);
 }
 
-function picklistPreHook(controlId){ 
-    //Custom Code 
-    //console.log(controlId);
+function picklistPreHook(controlId) {
+  //Custom Code
+  //console.log(controlId);
 }
 
-function subFormPreHook(buttonId){ 
-    //console.log(buttonId);
-    return true; 
+function subFormPreHook(buttonId) {
+  //console.log(buttonId);
+  return true;
 }
 
-function postHookPickListCancel(textid){ 
-    //CustomCode 
-//    console.log(textid);
+function postHookPickListCancel(textid) {
+  //CustomCode
+  //    console.log(textid);
 }
 
-function clearPicklistPostHook(controlId){
-    //Custom Code 
+function clearPicklistPostHook(controlId) {
+  //Custom Code
   //  console.log(controlId);
 }
 
-function formChangeHook(ref){
-    //console.log(ref);
+function formChangeHook(ref) {
+  //console.log(ref);
 }
 
-function addRowPostHook(tableId){ 
-    //Custom Code 
-    //console.log(tableId);
+function addRowPostHook(tableId) {
+  //Custom Code
+  //console.log(tableId);
 }
 
-function deleteRowPostHook(tableId, rowIndices){ 
-    //Custom Code 
-    //console.log(tableId, rowIndices);
+function deleteRowPostHook(tableId, rowIndices) {
+  //Custom Code
+  //console.log(tableId, rowIndices);
 }
 
-function onTableCellChange(rowIndex,colIndex,ref,controlId){ 
-    //custom code 
-    //console.log(rowIndex,colIndex,ref,controlId);
+function onTableCellChange(rowIndex, colIndex, ref, controlId) {
+  //custom code
+  //console.log(rowIndex,colIndex,ref,controlId);
 }
 
-function selectRowHook(tableId,selectedRowsArray,isAllRowsSelected){
-    //custom code 
-    //console.log(tableId, selectedRowsArray, isAllRowsSelected);
+function selectRowHook(tableId, selectedRowsArray, isAllRowsSelected) {
+  //custom code
+  //console.log(tableId, selectedRowsArray, isAllRowsSelected);
 }
 
-function saveAndNextPreHook(tabId){    
-    return false;
+function saveAndNextPreHook(tabId) {
+  return false;
 }
 
-function closeWorkitemHook() {
-    
-}
+function closeWorkitemHook() {}
 
 function skipValidation() {
-    
-    return false;
+  return false;
 }
 
-
 function preHookDeleteDocument() {
-    return true;
+  return true;
 }
 
 function restrictMultipleDocUpload() {
-    return false;
+  return false;
 }
 
-function setDefaultPrecisionForControl(){
-    return 2
+function setDefaultPrecisionForControl() {
+  return 2;
 }
 
-function clearEditableComboBoxValueIFNotExists(){
-    return true
+function clearEditableComboBoxValueIFNotExists() {
+  return true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*******************************************  Custom Code Implementation for fetching Workitem Information ************************************************
 	1. Custom Implementation should call window.getWorkitemDataHandler(["form_data","doc","excp","todo"], true) to fetch Workitem Information.
@@ -189,63 +149,65 @@ function clearEditableComboBoxValueIFNotExists(){
 	2. Output returned is in json format whose sample is provided at bottom of this article.	
 ***********************************************************************************************************************************************************/
 
-window.getWorkitemDataHandler = function (){	
-	window._getWorkitemData(["form_data","doc","excp","todo"], window.workitemDataProcessor, true);
-}
+window.getWorkitemDataHandler = function () {
+  window._getWorkitemData(
+    ["form_data", "doc", "excp", "todo"],
+    window.workitemDataProcessor,
+    true,
+  );
+};
 
-window.workitemDataProcessor = function (workitemData){
-	// ==============================================	Custom Implementation Start here	==========================================================    
-	var workitemDataJson = JSON.parse(workitemData);
-		
-	if(workitemDataJson.data.doc){
-		var docStatus = workitemDataJson.data.doc.status;
-		if(docStatus.maincode == "0"){
-			var docData = workitemDataJson.data.doc.data;
-			//alert("##docData="+docData);
-		}
-	} 
-	
-	if(workitemDataJson.data.excp){
-		var excpStatus = workitemDataJson.data.excp.status;
-		if(excpStatus.maincode == "0"){
-			var excpData = workitemDataJson.data.excp.data;	
-			//alert("##excpData="+excpData);
-		}
-	} 
-	
-	if(workitemDataJson.data.form_data){
-		var formDataStatus = workitemDataJson.data.form_data.status;
-		if(formDataStatus.maincode == "0"){
-			var formData = workitemDataJson.data.form_data.data;
-			//alert("##formData="+formData);
-		}
-	} 
-	
-	if(workitemDataJson.data.todo){
-		var todoStatus = workitemDataJson.data.todo.status;
-		if(todoStatus.maincode == "0"){
-			var todoData = workitemDataJson.data.todo.data;
-			//alert("##todoData="+todoData);
-		}
-	}
-	
-	
-	/* 	Uncomment below code to unlock the workitem. 
+window.workitemDataProcessor = function (workitemData) {
+  // ==============================================	Custom Implementation Start here	==========================================================
+  var workitemDataJson = JSON.parse(workitemData);
+
+  if (workitemDataJson.data.doc) {
+    var docStatus = workitemDataJson.data.doc.status;
+    if (docStatus.maincode == "0") {
+      var docData = workitemDataJson.data.doc.data;
+      //alert("##docData="+docData);
+    }
+  }
+
+  if (workitemDataJson.data.excp) {
+    var excpStatus = workitemDataJson.data.excp.status;
+    if (excpStatus.maincode == "0") {
+      var excpData = workitemDataJson.data.excp.data;
+      //alert("##excpData="+excpData);
+    }
+  }
+
+  if (workitemDataJson.data.form_data) {
+    var formDataStatus = workitemDataJson.data.form_data.status;
+    if (formDataStatus.maincode == "0") {
+      var formData = workitemDataJson.data.form_data.data;
+      //alert("##formData="+formData);
+    }
+  }
+
+  if (workitemDataJson.data.todo) {
+    var todoStatus = workitemDataJson.data.todo.status;
+    if (todoStatus.maincode == "0") {
+      var todoData = workitemDataJson.data.todo.data;
+      //alert("##todoData="+todoData);
+    }
+  }
+
+  /* 	Uncomment below code to unlock the workitem. 
 		This is required if Application load data from DB and does not store it in Web Session e.g Mobile App. Desktop Application version unlocks workiem on browser window close automatically so explicit call is not required.
-	*/	
-	//window._unlockWorkitem(workitemUnlockProcessor);
-}
+	*/
+  //window._unlockWorkitem(workitemUnlockProcessor);
+};
 
-window.workitemUnlockProcessor = function (workitemUnlockData){
-	workitemUnlockDataJson = JSON.parse(workitemUnlockData);
-	
-	var workitemUnlockStatus = workitemUnlockDataJson.status;
-	if(workitemUnlockStatus.maincode == "0"){
-		var workitemStatus = workitemUnlockDataJson.data.status_list[0].status; //"Success"
-		//alert("##workitemStatus="+workitemStatus);
-	}
-}
+window.workitemUnlockProcessor = function (workitemUnlockData) {
+  workitemUnlockDataJson = JSON.parse(workitemUnlockData);
 
+  var workitemUnlockStatus = workitemUnlockDataJson.status;
+  if (workitemUnlockStatus.maincode == "0") {
+    var workitemStatus = workitemUnlockDataJson.data.status_list[0].status; //"Success"
+    //alert("##workitemStatus="+workitemStatus);
+  }
+};
 
 /* Response JSON format of window._getWorkitemData(["data","doc","excp","todo"], true) method
 ***********************************************************************************************************************************************************
@@ -274,27 +236,30 @@ window.workitemUnlockProcessor = function (workitemUnlockData){
 var isWebViewReady = false;
 
 window.addEventListener("flutterInAppWebViewPlatformReady", function (event) {
-    isWebViewReady = true;
+  isWebViewReady = true;
 });
 
 function triggerMobileCustomCode(requestName, data) {
-    //Prepare data for the mobile request
-    var argsObj = {
-        "RequestId": requestName,
-        "Data": data
-    };
-    var argsJsonString = JSON.stringify(argsObj);
-    //Custom trggering of mobile handler
-    console.log("Triggering handler");
-    return window.flutter_inappwebview.callHandler('customMobileCodeHandler', argsJsonString);
+  //Prepare data for the mobile request
+  var argsObj = {
+    RequestId: requestName,
+    Data: data,
+  };
+  var argsJsonString = JSON.stringify(argsObj);
+  //Custom trggering of mobile handler
+  console.log("Triggering handler");
+  return window.flutter_inappwebview.callHandler(
+    "customMobileCodeHandler",
+    argsJsonString,
+  );
 }
 
 function onEventRecievedFromMobile(recievedDataString) {
-    //Whenever a event will be triggered from Mobile side
-    //This method will be triggered with data and eventName 
-    var dataObj = JSON.parse(recievedDataString);
-    console.log("Event triggered from Mobile" + recievedDataString);
-    var eventId = dataObj["RequestId"];
-    var dataFromMobileEnd = dataObj["Data"];
-    //The above data will be used for funther operations to be performed by form accordingly
+  //Whenever a event will be triggered from Mobile side
+  //This method will be triggered with data and eventName
+  var dataObj = JSON.parse(recievedDataString);
+  console.log("Event triggered from Mobile" + recievedDataString);
+  var eventId = dataObj["RequestId"];
+  var dataFromMobileEnd = dataObj["Data"];
+  //The above data will be used for funther operations to be performed by form accordingly
 }
