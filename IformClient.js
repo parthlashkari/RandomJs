@@ -1,5 +1,5 @@
 function hello() {
-  console.log("parth laswowowhkari");
+  console.log("parth laswowowerthkari");
 }
 
 function getExternalJSPaths() {
